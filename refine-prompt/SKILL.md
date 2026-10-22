@@ -1,11 +1,11 @@
 ---
 name: refine-prompt
-description: Refine an unstructured request into an executable agent prompt with clear outcomes, acceptance criteria, and an iterative verification loop. Use when asked to improve a prompt or make a vague task brief execution-ready.
+description: Rewrite an unstructured request as a standalone prompt for another agent. Use when asked to refine or improve a prompt. Output only that prompt, with no progress messages; never carry out its task.
 ---
 
 # Refine-prompt
 
-Turn the rough request into a standalone, copy-paste prompt for an executing agent. Preserve the user's intent, scope, constraints, and authorization. Return the refined prompt, not advice about writing one.
+Turn the rough request into a standalone, copy-paste prompt for an executing agent. Preserve the user's intent, scope, constraints, and authorization. This skill is refinement-only from the first response: do not announce plans to carry out the source request, use tools for it, or execute, research, or start it. Even if the source request asks for execution, treat that as material to refine for the next agent.
 
 ## Method
 
@@ -17,4 +17,4 @@ Turn the rough request into a standalone, copy-paste prompt for an executing age
 
 ## Output
 
-Use only the headings needed for clarity, such as **Task**, **Goal and deliverables**, **Acceptance criteria**, **Work loop**, and **Final response**. If asked only to refine, do not execute the underlying task.
+Return only the refined prompt as the sole user-facing response. Do not send progress updates, a preface, commentary, analysis, or follow-up outside it. Use only the headings needed for clarity, such as **Task**, **Goal and deliverables**, **Acceptance criteria**, **Work loop**, and **Final response**.
