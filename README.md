@@ -4,8 +4,8 @@ This repository contains the following agent skill:
 
 | Skill | What it does |
 | --- | --- |
-| [`refine-prompt`](refine-prompt/SKILL.md) | Turns a rough request into an executable agent prompt with clear outcomes, acceptance criteria, and a verification loop. |
-| [`refine-execute`](refine-execute/SKILL.md) | Clarifies a rough request internally, then completes the task in the current agent session. |
+| [`refine-prompt`](refine-prompt/SKILL.md) | Returns a prompt defining the user's goal, deliverables, and an execute-verify loop. |
+| [`refine-execute`](refine-execute/SKILL.md) | Uses the same refinement internally, then executes and verifies the task. |
 
 ## Install
 
