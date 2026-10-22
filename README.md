@@ -5,6 +5,7 @@ This repository contains the following agent skill:
 | Skill | What it does |
 | --- | --- |
 | [`refine-prompt`](refine-prompt/SKILL.md) | Turns a rough request into an executable agent prompt with clear outcomes, acceptance criteria, and a verification loop. |
+| [`refine-execute`](refine-execute/SKILL.md) | Clarifies a rough request internally, then completes the task in the current agent session. |
 
 ## Install
 
@@ -20,10 +21,13 @@ To list the available skills without installing them:
 npx skills add lastnurik/skills --list
 ```
 
-To install only `refine-prompt`:
+To install one skill:
 
 ```bash
 npx skills add lastnurik/skills --skill refine-prompt
+npx skills add lastnurik/skills --skill refine-execute
 ```
 
-The CLI discovers `refine-prompt/SKILL.md` directly from this repository. No npm package or build step is required.
+`refine-prompt` returns a rewritten prompt. `refine-execute` carries out the request and reports the result.
+
+The CLI discovers each skill from its top-level `SKILL.md` folder. No npm package or build step is required.
